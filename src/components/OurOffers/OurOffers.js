@@ -17,7 +17,7 @@ const OurOffers = () => {
             <hr className="heading-line" />
             <Container className="mt-4">
 
-                <Row lg={3} md={2} sm={1}>
+                <Row lg={3} md={2} sm={1} xs={1}>
                     {
                         offers.map(offer => <ShowOffer
                             key={offer._id}

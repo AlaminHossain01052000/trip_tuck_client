@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Zen+Antique+Soft&display=swap');
+#our-offers .card{
+    height: 560px;
+
+}
+#our-offers .card-body{
+    padding: 0px;
+    margin-top: 15px;
+    color: #222f3e;
+}
+#our-offers .card-body .h5{
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 600;
+}
+
+#our-offers .card-body p{
+    font-family: 'Zen Antique Soft', serif;
+}
+#our-offers .card-img-top{
+    
+    height: 200px;
+    position: relative;
+}
+#our-offers .trip-price{
+    position:absolute;
+    top: 50px;
+    right: 17px;
+    z-index: 1;
+}
+#our-offers .trip-price p{
+    padding: 5px 20px;
+    background-color: #DC3545;
+    color:white;
+    font-weight: 500;
+}
+#our-offers .card:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    transition: .5s;
+}
+.book-now-para{
+    font-weight: 600;
+}
+.book-now-para{
+    color:#DC3545;
+}
+.book-now-para:hover{
+    color:#0D6EFD;   
+}

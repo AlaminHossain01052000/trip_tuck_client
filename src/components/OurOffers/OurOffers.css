@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@500&display=swap');
+.heading-title{
+    font-family: 'Alumni Sans', sans-serif;
+    font-size: 64px;
+    color: #ff6b6b;
+    letter-spacing: 4px;
+}
+.heading-line{
+    border: 1px solid #DC3545;
+    margin: 0 auto;
+    width: 25%;
+   
+}

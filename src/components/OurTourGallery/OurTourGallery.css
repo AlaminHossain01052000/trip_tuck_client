@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@500&family=Gayathri:wght@700&family=Inika&family=Maiden+Orange&display=swap');
+.font-alumni-sans{
+    font-family: 'Alumni Sans', sans-serif;
+}
+.font-gayathri{
+    font-family: 'Gayathri', sans-serif;
+}
+.font-maiden-orange{
+    font-family: 'Maiden Orange', cursive;
+}
+.font-inika{
+    font-family: 'Inika', serif;
+}

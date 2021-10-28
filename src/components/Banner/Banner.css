@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Poppins&display=swap');
+.banner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-bottom: 56.388%;
+}
+.banner-vid{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+}
+.banner-container{
+    position: relative;
+}
+.img-container{
+    position: relative;
+}
+.banner-img{
+    
+   
+    height: 500px;
+}
+.transparent{
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 1;
+}
+.content{
+    position: absolute;
+    top:25%;
+    text-align: right;
+    right: 10%;
+    z-index: 1;
+    width: 25%;
+}
+.content h1{
+    font-family: 'Oswald', sans-serif;
+}
+.content p{
+    font-family: 'Poppins', sans-serif;
+}
+.text-paste{
+    color: #1dd1a1;
+}
+.banner-explore-btn{
+    border: 0px;
+    font-weight: 500;
+}
+.banner-explore-btn:hover{
+    background-color: #007BFF;
+}
+@media only screen and (max-width: 600px) {
+    .content {
+      width: 80%;
+    }
+  }

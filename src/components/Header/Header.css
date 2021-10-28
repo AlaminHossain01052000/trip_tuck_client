@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
+
+.font-zen{
+    font-family: 'Zen Antique Soft', serif;
+    font-weight: 400;
+}
+.nav-item a{
+    color:white;
+    font-weight: 500;
+    font-size: 16px;
+    
+}

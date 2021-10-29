@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Col, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import "./ShowOffer.css";
 const ShowOffer = ({ offer }) => {
     const [addedInWishlist, setAddedInWishlist] = useState(false);
@@ -26,7 +27,9 @@ const ShowOffer = ({ offer }) => {
                 </Card.Body>
                 <div className="d-flex align-middle justify-content-between">
                     <div>
-                        <p className="book-now-para">Book Now <i className="fas fa-arrow-right ms-2"></i> </p>
+                        <p className="book-now-para">
+                            <Link className="book-now-para" to={`/bookingform/${_id}`}>Book Now</Link>
+                            <i className="fas fa-arrow-right ms-2"></i> </p>
                     </div>
 
                     <div>

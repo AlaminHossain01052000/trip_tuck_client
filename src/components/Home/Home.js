@@ -10,7 +10,6 @@ import OurTourGallery from '../OurTourGallery/OurTourGallery';
 const Home = () => {
     return (
         <div>
-            <Header></Header>
             <Banner></Banner>
             <OurOffers></OurOffers>
             <OurTourGallery></OurTourGallery>

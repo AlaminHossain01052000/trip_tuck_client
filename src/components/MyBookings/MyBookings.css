@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Patua+One&family=Poppins&family=Spartan:wght@500&display=swap');
+#my-bookings .card{
+height: 400px;
+}
+#my-bookings .card-img-top{
+    height: 200px;
+}
+#my-bookings .card-title{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+#my-bookings .card .card-text{
+    font-family: 'Spartan', sans-serif;
+    color: black;
+}
+#my-bookings .card button{
+    font-family: 'Poppins', sans-serif;
+
+}
+table, th, td {
+    border: 1px solid #222f3e;
+  }
+th,td{
+    padding: 10px;
+
+}  
+td{
+    background-color: #c8d6e5;
+    font-family: 'Patua One', cursive;
+}
+th{
+    background-color: #ff6b6b;
+    color: white;
+    font-family: 'Acme', sans-serif;
+}

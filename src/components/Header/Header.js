@@ -39,6 +39,9 @@ const Header = () => {
                         <Nav.Item>
                             <Nav.Link as={Link} to="/myBookings">My Bookings</Nav.Link>
                         </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link as={Link} to="/allbookings">Manage All Bookings</Nav.Link>
+                        </Nav.Item>
                     </div>
                 </Nav>
             </Container>

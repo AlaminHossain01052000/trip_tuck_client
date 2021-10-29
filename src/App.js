@@ -9,6 +9,7 @@ import AuthProvider from './firebase/AuthProvider/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import BookingForm from './components/BookingForm/BookingForm';
 import MyBookings from './components/MyBookings/MyBookings';
+import ManageAllBookings from './components/ManageAllBookings/ManageAllBookings';
 
 function App() {
 
@@ -33,6 +34,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path="/myBookings">
               <MyBookings></MyBookings>
+            </PrivateRoute>
+            <PrivateRoute path="/allbookings">
+              <ManageAllBookings></ManageAllBookings>
             </PrivateRoute>
           </Switch>
         </BrowserRouter>

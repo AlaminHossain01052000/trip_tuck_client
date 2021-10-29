@@ -20,9 +20,9 @@ const BookingForm = () => {
     const onSubmit = data => {
         const myOffer = offers?.find(offer => offer.title === data.selectedOffer)
 
-        data.img = myOffer.img;
+        data.img = myOffer?.img;
         data.status = "pending";
-        data.price = myOffer.price;
+        data.price = myOffer?.price;
         data.totalCost = (data.numberOfPeople * myOffer?.price);
         console.log(data);
         fetch("http://localhost:5000/bookings", {

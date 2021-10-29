@@ -23,26 +23,7 @@ const MyBookings = () => {
                     ></MyBookingCard>)
                 }
             </Row>
-            {/* <table>
-                <thead>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Date</th>
-                    <th>Booked Offers</th>
-                    <th>Total Cost</th>
-                    <th>Action</th>
-                </thead>
-                <tbody>
-                    {
-                        myBookedOffers.map(myBookedOffer => <MyBookingCard
-                            key={myBookedOffer._id}
-                            myBookedOffer={myBookedOffer}
-                        ></MyBookingCard>)
-                    }
-                </tbody>
 
-
-            </table> */}
 
         </div>
     );

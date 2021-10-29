@@ -1,0 +1,11 @@
+.contact-card{
+    /* border: 1px solid #DC3545; */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.contact-card:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: .5s;
+   
+}    

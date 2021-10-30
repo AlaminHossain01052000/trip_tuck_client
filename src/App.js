@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/Header';
@@ -11,6 +10,7 @@ import BookingForm from './components/BookingForm/BookingForm';
 import MyBookings from './components/MyBookings/MyBookings';
 import ManageAllBookings from './components/ManageAllBookings/ManageAllBookings';
 import AddOffer from './components/AddOffer/AddOffer';
+import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -43,6 +43,7 @@ function App() {
               <AddOffer></AddOffer>
             </PrivateRoute>
           </Switch>
+          <Footer></Footer>
         </BrowserRouter>
       </AuthProvider>
     </div>

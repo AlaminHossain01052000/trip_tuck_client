@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Card, Col, Button } from 'react-bootstrap';
 
 const MyBookingCard = ({ myBookedOffer }) => {
-    const { _id, img, name, email, date, address, selectedOffer, totalCost } = myBookedOffer;
+    const { _id, img, date, selectedOffer, totalCost, status } = myBookedOffer;
 
 
 
@@ -10,11 +10,14 @@ const MyBookingCard = ({ myBookedOffer }) => {
         const sureDeleting = window.confirm("Are you sure want to cancel ? ");
         console.log(sureDeleting);
         if (sureDeleting) {
-            fetch(`http://localhost:5000/bookings/${id}`, {
+
+            fetch(`https://murmuring-beyond-73506.herokuapp.com/bookings/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())
-                .then(data => console.log(data))
+                .then(data => {
+
+                })
         }
 
 
@@ -31,28 +34,14 @@ const MyBookingCard = ({ myBookedOffer }) => {
                     <Card.Text>
                         <p>Date : {date}</p>
                         <p>Total Cost : {totalCost}</p>
+                        <p>Status : {status}</p>
                     </Card.Text>
                     <Button variant="danger" onClick={() => handleDeletingOffer(_id)}>Cancel</Button>
                 </Card.Body>
             </Card>
         </Col>
 
-        // <tr>
 
-
-
-
-        //     <td>{name}</td>
-        //     <td>{email}</td>
-        //     <td>{date}</td>
-        //     <td>{selectedOffer}</td>
-        //     <td>{totalCost}</td>
-        //     <td><button className="btn btn-danger">Delete</button></td>
-
-
-
-
-        // </tr>
     );
 };
 

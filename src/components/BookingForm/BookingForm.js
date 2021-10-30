@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 import "./BookingForm.css";
 
 const BookingForm = () => {
     const [offers, setOffers] = useState([]);
-    const [selectedOffer, setSelectedOffer] = useState({})
-    const { id } = useParams();
+
     const { user } = useAuth();
 
 
     useEffect(() => {
-        fetch("http://localhost:5000/offers")
+        fetch("https://murmuring-beyond-73506.herokuapp.com/offers")
             .then(res => res.json())
             .then(data => setOffers(data))
     }, [])
@@ -25,7 +23,7 @@ const BookingForm = () => {
         data.price = myOffer?.price;
         data.totalCost = (data.numberOfPeople * myOffer?.price);
 
-        fetch("http://localhost:5000/bookings", {
+        fetch("https://murmuring-beyond-73506.herokuapp.com/bookings", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

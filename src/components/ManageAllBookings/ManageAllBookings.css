@@ -1,0 +1,18 @@
+
+table, th, td {
+
+    border: 1px solid #222f3e;
+  }
+th,td{
+    padding: 10px;
+
+}  
+td{
+    background-color: #c8d6e5;
+    font-family: 'Patua One', cursive;
+}
+th{
+    background-color: #ff6b6b;
+    color: white;
+    font-family: 'Acme', sans-serif;
+}

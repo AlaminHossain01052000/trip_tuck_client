@@ -2,10 +2,9 @@ import React, { useEffect, useState } from 'react';
 
 const ShowAllBookedOffer = (props) => {
     const [bookings, setBookings] = useState([]);
-
     const { _id, name, email, date, selectedOffer, totalCost, status } = props.allBookedOffer;
     useEffect(() => {
-        fetch("http://localhost:5000/bookings")
+        fetch("https://murmuring-beyond-73506.herokuapp.com/bookings")
             .then(res => res.json())
             .then(data => setBookings(data));
     }, [bookings])
@@ -14,7 +13,7 @@ const ShowAllBookedOffer = (props) => {
         const approvableTrip = bookings.find(booking => booking._id === id);
         approvableTrip.status = "approved";
 
-        fetch(`http://localhost:5000/bookings/${id}`, {
+        fetch(`https://murmuring-beyond-73506.herokuapp.com/bookings/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
@@ -25,6 +24,7 @@ const ShowAllBookedOffer = (props) => {
             .then(data => {
                 if (data.acknowledged) {
                     alert("Status Updated To Approved");
+                    window.location.reload();
 
                 }
             })
@@ -32,7 +32,7 @@ const ShowAllBookedOffer = (props) => {
     const handleDeletingBooking = id => {
         const isConfirmed = window.confirm("Are you sure want to delete ? ")
         if (isConfirmed) {
-            fetch(`http://localhost:5000/bookings/${id}`, {
+            fetch(`https://murmuring-beyond-73506.herokuapp.com/bookings/${id}`, {
                 method: "delete"
             })
                 .then(res => res.json())

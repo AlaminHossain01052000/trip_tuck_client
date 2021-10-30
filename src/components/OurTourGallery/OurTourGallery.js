@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import "./OurTourGallery.css";
 const OurTourGallery = () => {
     return (
-        <div>
+        <div id="our-tour-gallery">
             <div>
                 <h1 className="heading-title">Our Tour Gallery</h1>
                 <hr className="heading-line mb-4" />

@@ -11,3 +11,10 @@
 .font-inika{
     font-family: 'Inika', serif;
 }
+@media only screen and (max-width: 600px) {
+    #our-tour-gallery img{
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+

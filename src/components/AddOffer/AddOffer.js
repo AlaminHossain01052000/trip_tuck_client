@@ -2,9 +2,9 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import "./AddOffer.css";
 const AddOffer = () => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        fetch("http://localhost:5000/offers", {
+        fetch("https://murmuring-beyond-73506.herokuapp.com/offers", {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -12,7 +12,15 @@ const AddOffer = () => {
             body: JSON.stringify(data)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                if (data.insertedId) {
+                    alert("Data inserted successfully");
+                    reset();
+                }
+
+
+
+            })
     };
     return (
         <div id="add-an-offer">

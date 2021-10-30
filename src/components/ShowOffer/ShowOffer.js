@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Col, Button } from 'react-bootstrap';
+import { Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import "./ShowOffer.css";
 const ShowOffer = ({ offer }) => {

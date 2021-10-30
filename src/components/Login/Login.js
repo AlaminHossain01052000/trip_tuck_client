@@ -7,7 +7,7 @@ const Login = () => {
     const history = useHistory();
     console.log(location, history);
     const redirect_uri = location.state?.from || "/home";
-    const { handleGoogleSignIn, user, handleLogOut, setLoading } = useFirebase();
+    const { handleGoogleSignIn, user, setLoading } = useFirebase();
     console.log(user);
     const googleLogIn = () => {
         handleGoogleSignIn()

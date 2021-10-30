@@ -3,15 +3,13 @@ import React from 'react';
 import "./Banner.css";
 
 const Banner = () => {
-    // style={width:"100%",height:"0px",position:"relative",paddingBottom:"56.376%"}
-    // style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;" 
+
     return (
         <div className="banner-container">
 
             <div className="img-container">
                 <img src="https://i.ibb.co/ZNvJLQR/Umbrella-and-chair-on-the-Beautiful-tropical-beach-and-sea-with-coconut-palm-tree-in-paradise-island.jpg" alt="" className="w-100 banner-img" />
 
-                {/* <!-- Optional: some overlay text to describe the video --> */}
                 <div className="transparent"></div>
             </div>
 

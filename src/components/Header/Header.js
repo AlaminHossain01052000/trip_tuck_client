@@ -5,7 +5,7 @@ import useAuth from '../../hooks/useAuth';
 import "./Header.css";
 
 const Header = () => {
-    const { user } = useAuth();
+    const { user, handleLogOut } = useAuth();
     return (
         <header className="bg-danger">
             <Container>
@@ -18,30 +18,39 @@ const Header = () => {
                         <Nav.Item>
                             <Nav.Link as={Link} to="/home">Home</Nav.Link>
                         </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link as={Link} to="/login">Login</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link as={Link} to="/myevent">My Events</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link as={Link} to="/bookingform/1">Booking Form</Nav.Link>
-                        </Nav.Item>
+
+
+
 
                         {
-                            user?.email && <Nav.Item>
-                                <Nav.Link as={Link} to="/home" >
+                            user?.email ? <Nav.Item>
+                                <Nav.Link as={Link} to="/home" onClick={handleLogOut}>
                                     Logout
                                 </Nav.Link>
+                            </Nav.Item> : <Nav.Item>
+                                <Nav.Link as={Link} to="/login">Login</Nav.Link>
                             </Nav.Item>
 
                         }
-                        <Nav.Item>
-                            <Nav.Link as={Link} to="/myBookings">My Bookings</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link as={Link} to="/allbookings">Manage All Bookings</Nav.Link>
-                        </Nav.Item>
+                        {
+                            user?.email && <Nav.Item>
+                                <Nav.Link as={Link} to="/myBookings">My Bookings</Nav.Link>
+                            </Nav.Item>
+
+                        }
+                        {
+                            user.email &&
+                            <Nav.Item>
+                                <Nav.Link as={Link} to="/allbookings">Manage All Bookings</Nav.Link>
+                            </Nav.Item>
+                        }
+
+                        {
+                            user.email && <Nav.Item>
+                                <Nav.Link as={Link} to="/addOffer">Add an Offer</Nav.Link>
+                            </Nav.Item>
+                        }
+
                     </div>
                 </Nav>
             </Container>

@@ -9,14 +9,14 @@ const BookingForm = () => {
     const [selectedOffer, setSelectedOffer] = useState({})
     const { id } = useParams();
     const { user } = useAuth();
-    console.log(user);
+
 
     useEffect(() => {
         fetch("http://localhost:5000/offers")
             .then(res => res.json())
             .then(data => setOffers(data))
     }, [])
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         const myOffer = offers?.find(offer => offer.title === data.selectedOffer)
 
@@ -24,7 +24,7 @@ const BookingForm = () => {
         data.status = "pending";
         data.price = myOffer?.price;
         data.totalCost = (data.numberOfPeople * myOffer?.price);
-        console.log(data);
+
         fetch("http://localhost:5000/bookings", {
             method: "POST",
             headers: {
@@ -33,7 +33,14 @@ const BookingForm = () => {
             body: JSON.stringify(data)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+
+                if (data.insertedId) {
+                    alert("seccessfully submitted");
+                    reset();
+                }
+
+            })
 
 
     };

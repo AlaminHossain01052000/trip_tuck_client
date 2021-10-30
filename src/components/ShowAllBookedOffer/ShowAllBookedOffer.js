@@ -2,17 +2,18 @@ import React, { useEffect, useState } from 'react';
 
 const ShowAllBookedOffer = (props) => {
     const [bookings, setBookings] = useState([]);
+
     const { _id, name, email, date, selectedOffer, totalCost, status } = props.allBookedOffer;
     useEffect(() => {
         fetch("http://localhost:5000/bookings")
             .then(res => res.json())
             .then(data => setBookings(data));
-    }, [])
+    }, [bookings])
     const handleStatusUpdating = id => {
-        console.log(id);
+
         const approvableTrip = bookings.find(booking => booking._id === id);
         approvableTrip.status = "approved";
-        console.log(approvableTrip);
+
         fetch(`http://localhost:5000/bookings/${id}`, {
             method: "PUT",
             headers: {
@@ -21,14 +22,29 @@ const ShowAllBookedOffer = (props) => {
             body: JSON.stringify(approvableTrip)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                if (data.acknowledged) {
+                    alert("Status Updated To Approved");
+
+                }
+            })
     }
     const handleDeletingBooking = id => {
-        fetch(`http://localhost:5000/bookings/${id}`, {
-            method: "delete"
-        })
-            .then(res => res.json())
-            .then(data => console.log(data))
+        const isConfirmed = window.confirm("Are you sure want to delete ? ")
+        if (isConfirmed) {
+            fetch(`http://localhost:5000/bookings/${id}`, {
+                method: "delete"
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount === 1) {
+                        alert("Successfully Deleted");
+
+
+                    }
+                })
+        }
+
     }
     return (
         <tr>

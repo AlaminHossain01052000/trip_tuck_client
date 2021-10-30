@@ -1,0 +1,32 @@
+#add-an-offer{
+    padding: 50px;
+    
+}
+#add-an-offer form{
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+#add-an-offer input,select{
+    padding: 10px;
+    border-radius: 5px;
+}
+#add-an-offer input,select{
+    display: block;
+    margin: 10px 0;
+    background-color: rgb(72, 219, 251);
+    border: 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#add-an-offer input:focus{
+    background-color: #c8d6e5;
+    color: #222f3e;
+    border:none;
+}
+#add-an-offer input:hover{
+    background-color: rgba(72, 219, 251,0.6);
+}

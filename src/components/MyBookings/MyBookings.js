@@ -10,7 +10,7 @@ const MyBookings = () => {
         fetch(`http://localhost:5000/bookings/${user.email}`)
             .then(res => res.json())
             .then(data => setMyBookedOffers(data))
-    }, [user])
+    }, [myBookedOffers])
     return (
         <div className="w-75 mx-auto my-5" id="my-bookings">
             <h1 className="heading-title">My Bookings</h1>

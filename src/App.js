@@ -10,6 +10,7 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import BookingForm from './components/BookingForm/BookingForm';
 import MyBookings from './components/MyBookings/MyBookings';
 import ManageAllBookings from './components/ManageAllBookings/ManageAllBookings';
+import AddOffer from './components/AddOffer/AddOffer';
 
 function App() {
 
@@ -37,6 +38,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path="/allbookings">
               <ManageAllBookings></ManageAllBookings>
+            </PrivateRoute>
+            <PrivateRoute path="/addOffer">
+              <AddOffer></AddOffer>
             </PrivateRoute>
           </Switch>
         </BrowserRouter>

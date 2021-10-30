@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 #booking-form{
-    padding: 100px;
+    padding: 100px 0;
     
 }
 #booking-form form{
@@ -31,3 +31,9 @@
 #booking-form input:hover{
     background-color: rgba(72, 219, 251,0.6);
 }
+
+@media only screen and (max-width: 400px) {
+    #booking-form form {
+     width: 300px;
+    }
+  }

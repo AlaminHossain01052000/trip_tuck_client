@@ -9,7 +9,7 @@ const ManageAllBookings = () => {
             .then(data => setAllBookedOffers(data))
     }, [])
     return (
-        <div className="mt-5 d-flex justify-content-center" style={{ marginBottom: "188px" }}>
+        <div className="mt-5 d-flex justify-content-center" style={{ marginBottom: "380px" }}>
 
 
             <table>

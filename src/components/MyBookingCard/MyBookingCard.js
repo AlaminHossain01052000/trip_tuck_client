@@ -27,7 +27,7 @@ const MyBookingCard = ({ myBookedOffer }) => {
     }
     return (
         <Col>
-            <Card style={{ width: '18rem' }}>
+            <Card style={{ width: '18rem' }} className="mb-3">
                 <Card.Img variant="top" src={img} />
                 <Card.Body>
                     <Card.Title>{selectedOffer}</Card.Title>

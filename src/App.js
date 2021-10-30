@@ -11,6 +11,7 @@ import MyBookings from './components/MyBookings/MyBookings';
 import ManageAllBookings from './components/ManageAllBookings/ManageAllBookings';
 import AddOffer from './components/AddOffer/AddOffer';
 import Footer from './components/Footer/Footer';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
 
@@ -42,6 +43,9 @@ function App() {
             <PrivateRoute path="/addOffer">
               <AddOffer></AddOffer>
             </PrivateRoute>
+            <Route exact path="*">
+              <NotFound></NotFound>
+            </Route>
           </Switch>
           <Footer></Footer>
         </BrowserRouter>

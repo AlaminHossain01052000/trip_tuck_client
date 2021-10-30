@@ -2,15 +2,22 @@ import React, { useEffect, useState } from 'react';
 
 const ShowAllBookedOffer = (props) => {
     const [bookings, setBookings] = useState([]);
+    const [approvableTrip, setApprovableTrip] = useState({});
     const { _id, name, email, date, selectedOffer, totalCost, status } = props.allBookedOffer;
     useEffect(() => {
         fetch("https://murmuring-beyond-73506.herokuapp.com/bookings")
             .then(res => res.json())
-            .then(data => setBookings(data));
+            .then(data => {
+                setBookings(data)
+                data.map(booking => {
+                    if (booking._id === _id) {
+                        setApprovableTrip(booking);
+                    }
+                })
+            });
     }, [bookings])
     const handleStatusUpdating = id => {
 
-        const approvableTrip = bookings.find(booking => booking._id === id);
         approvableTrip.status = "approved";
 
         fetch(`https://murmuring-beyond-73506.herokuapp.com/bookings/${id}`, {
@@ -39,7 +46,7 @@ const ShowAllBookedOffer = (props) => {
                 .then(data => {
                     if (data.deletedCount === 1) {
                         alert("Successfully Deleted");
-
+                        window.location.reload();
 
                     }
                 })

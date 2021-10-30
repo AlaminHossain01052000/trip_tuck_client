@@ -17,9 +17,9 @@ const BookingForm = () => {
             .then(data => {
 
                 setOffers(data)
-                data.map(da => {
-                    if (da._id === id) {
-                        setMyOffer(da)
+                data.map(offer => {
+                    if (offer._id === id) {
+                        setMyOffer(offer)
                     }
                 })
             })

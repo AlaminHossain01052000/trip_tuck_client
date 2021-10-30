@@ -13,7 +13,7 @@ const Banner = () => {
                 <div className="transparent"></div>
             </div>
 
-            <div class="content">
+            <div className="content">
                 <h1 className="text-paste mb-3">Trip Tuck</h1>
                 <p className="text-white mb-3">We are promised to give you the best trip of your life . Our clients satisfaction is our one and only goal . We try our best to satisfy our client</p>
 

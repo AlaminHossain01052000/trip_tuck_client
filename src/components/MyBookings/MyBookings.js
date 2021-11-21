@@ -7,7 +7,7 @@ const MyBookings = () => {
     const { user } = useAuth();
     const [myBookedOffers, setMyBookedOffers] = useState([]);
     useEffect(() => {
-        fetch(`https://murmuring-beyond-73506.herokuapp.com/bookings/${user.email}`)
+        fetch(`http://localhost:5000/bookings/${user.email}`)
             .then(res => res.json())
             .then(data => setMyBookedOffers(data))
     }, [myBookedOffers])

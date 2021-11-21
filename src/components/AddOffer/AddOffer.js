@@ -4,7 +4,7 @@ import "./AddOffer.css";
 const AddOffer = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        fetch("https://murmuring-beyond-73506.herokuapp.com/offers", {
+        fetch("http://localhost:5000/offers", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

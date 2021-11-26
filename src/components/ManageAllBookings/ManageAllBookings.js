@@ -4,7 +4,7 @@ import "./ManageAllBookings.css"
 const ManageAllBookings = () => {
     const [allBookedOffers, setAllBookedOffers] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/bookings")
+        fetch("https://shrouded-anchorage-78278.herokuapp.com/bookings")
             .then(res => res.json())
             .then(data => setAllBookedOffers(data))
     }, [])

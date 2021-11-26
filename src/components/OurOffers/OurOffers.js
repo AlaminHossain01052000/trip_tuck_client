@@ -6,7 +6,7 @@ import "./OurOffers.css";
 const OurOffers = () => {
     const [offers, setOffers] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/offers")
+        fetch("https://shrouded-anchorage-78278.herokuapp.com/offers")
             .then(res => res.json())
             .then(data => setOffers(data))
     }, [])

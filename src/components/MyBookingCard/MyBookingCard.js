@@ -11,7 +11,7 @@ const MyBookingCard = ({ myBookedOffer }) => {
         console.log(sureDeleting);
         if (sureDeleting) {
 
-            fetch(`http://localhost:5000/bookings/${id}`, {
+            fetch(`https://shrouded-anchorage-78278.herokuapp.com/bookings/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())

@@ -12,7 +12,7 @@ const BookingForm = () => {
 
 
     useEffect(() => {
-        fetch("http://localhost:5000/offers")
+        fetch("https://shrouded-anchorage-78278.herokuapp.com/offers")
             .then(res => res.json())
             .then(data => {
 
@@ -35,7 +35,7 @@ const BookingForm = () => {
             data.totalCost = (data.numberOfPeople * myOffer?.price);
             data.selectedOffer = myOffer.title;
 
-            fetch("http://localhost:5000/bookings", {
+            fetch("https://shrouded-anchorage-78278.herokuapp.com/bookings", {
                 method: "POST",
                 headers: {
                     "content-type": "application/json"

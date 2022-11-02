@@ -4,7 +4,7 @@ import "./AddOffer.css";
 const AddOffer = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        fetch("https://shrouded-anchorage-78278.herokuapp.com/offers", {
+        fetch("https://trip-tuck-server.vercel.app/offers", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

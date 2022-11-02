@@ -6,7 +6,7 @@ import "./OurOffers.css";
 const OurOffers = () => {
     const [offers, setOffers] = useState([]);
     useEffect(() => {
-        fetch("https://shrouded-anchorage-78278.herokuapp.com/offers")
+        fetch("https://trip-tuck-server.vercel.app/offers")
             .then(res => res.json())
             .then(data => setOffers(data))
     }, [])

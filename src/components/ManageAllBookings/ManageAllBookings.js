@@ -4,7 +4,7 @@ import "./ManageAllBookings.css"
 const ManageAllBookings = () => {
     const [allBookedOffers, setAllBookedOffers] = useState([]);
     useEffect(() => {
-        fetch("https://shrouded-anchorage-78278.herokuapp.com/bookings")
+        fetch("https://trip-tuck-server.vercel.app/bookings")
             .then(res => res.json())
             .then(data => setAllBookedOffers(data))
     }, [])

@@ -12,7 +12,7 @@ const BookingForm = () => {
 
 
     useEffect(() => {
-        fetch("https://shrouded-anchorage-78278.herokuapp.com/offers")
+        fetch("https://trip-tuck-server.vercel.app/offers")
             .then(res => res.json())
             .then(data => {
 
@@ -35,7 +35,7 @@ const BookingForm = () => {
             data.totalCost = (data.numberOfPeople * myOffer?.price);
             data.selectedOffer = myOffer.title;
 
-            fetch("https://shrouded-anchorage-78278.herokuapp.com/bookings", {
+            fetch("https://trip-tuck-server.vercel.app/bookings", {
                 method: "POST",
                 headers: {
                     "content-type": "application/json"

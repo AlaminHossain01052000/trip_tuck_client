@@ -5,7 +5,7 @@ const ShowAllBookedOffer = (props) => {
     const [approvableTrip, setApprovableTrip] = useState({});
     const { _id, name, email, date, selectedOffer, totalCost, status } = props.allBookedOffer;
     useEffect(() => {
-        fetch("https://shrouded-anchorage-78278.herokuapp.com/bookings")
+        fetch("https://trip-tuck-server.vercel.app/bookings")
             .then(res => res.json())
             .then(data => {
                 setBookings(data)
@@ -20,7 +20,7 @@ const ShowAllBookedOffer = (props) => {
 
         approvableTrip.status = "approved";
 
-        fetch(`https://shrouded-anchorage-78278.herokuapp.com/bookings/${id}`, {
+        fetch(`https://trip-tuck-server.vercel.app/bookings/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
@@ -39,7 +39,7 @@ const ShowAllBookedOffer = (props) => {
     const handleDeletingBooking = id => {
         const isConfirmed = window.confirm("Are you sure want to delete ? ")
         if (isConfirmed) {
-            fetch(`https://shrouded-anchorage-78278.herokuapp.com/bookings/${id}`, {
+            fetch(`https://trip-tuck-server.vercel.app/bookings/${id}`, {
                 method: "delete"
             })
                 .then(res => res.json())

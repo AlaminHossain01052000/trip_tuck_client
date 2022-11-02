@@ -11,7 +11,7 @@ const MyBookingCard = ({ myBookedOffer }) => {
         console.log(sureDeleting);
         if (sureDeleting) {
 
-            fetch(`https://shrouded-anchorage-78278.herokuapp.com/bookings/${id}`, {
+            fetch(`https://trip-tuck-server.vercel.app/bookings/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())

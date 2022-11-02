@@ -7,7 +7,7 @@ const MyBookings = () => {
     const { user } = useAuth();
     const [myBookedOffers, setMyBookedOffers] = useState([]);
     useEffect(() => {
-        fetch(`https://shrouded-anchorage-78278.herokuapp.com/bookings/${user.email}`)
+        fetch(`https://trip-tuck-server.vercel.app/bookings/${user.email}`)
             .then(res => res.json())
             .then(data => setMyBookedOffers(data))
     }, [myBookedOffers])

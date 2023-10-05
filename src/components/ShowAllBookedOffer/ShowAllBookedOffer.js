@@ -5,7 +5,7 @@ const ShowAllBookedOffer = (props) => {
     const [approvableTrip, setApprovableTrip] = useState({});
     const { _id, name, email, date, selectedOffer, totalCost, status } = props.allBookedOffer;
     useEffect(() => {
-        fetch("https://trip-tuck-server.vercel.app/bookings")
+        fetch("http://localhost:5000/bookings")
             .then(res => res.json())
             .then(data => {
                 setBookings(data)
@@ -20,7 +20,7 @@ const ShowAllBookedOffer = (props) => {
 
         approvableTrip.status = "approved";
 
-        fetch(`https://trip-tuck-server.vercel.app/bookings/${id}`, {
+        fetch(`http://localhost:5000/bookings/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
@@ -39,7 +39,7 @@ const ShowAllBookedOffer = (props) => {
     const handleDeletingBooking = id => {
         const isConfirmed = window.confirm("Are you sure want to delete ? ")
         if (isConfirmed) {
-            fetch(`https://trip-tuck-server.vercel.app/bookings/${id}`, {
+            fetch(`http://localhost:5000/bookings/${id}`, {
                 method: "delete"
             })
                 .then(res => res.json())

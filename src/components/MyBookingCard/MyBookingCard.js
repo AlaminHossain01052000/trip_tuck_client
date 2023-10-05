@@ -11,7 +11,7 @@ const MyBookingCard = ({ myBookedOffer }) => {
         console.log(sureDeleting);
         if (sureDeleting) {
 
-            fetch(`https://trip-tuck-server.vercel.app/bookings/${id}`, {
+            fetch(`http://localhost:5000/bookings/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())

@@ -7,7 +7,7 @@ const MyBookings = () => {
     const { user } = useAuth();
     const [myBookedOffers, setMyBookedOffers] = useState([]);
     useEffect(() => {
-        fetch(`https://trip-tuck-server.vercel.app/bookings/${user.email}`)
+        fetch(`http://localhost:5000/bookings/${user.email}`)
             .then(res => res.json())
             .then(data => setMyBookedOffers(data))
     }, [myBookedOffers])

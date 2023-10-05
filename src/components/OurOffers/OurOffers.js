@@ -6,7 +6,7 @@ import "./OurOffers.css";
 const OurOffers = () => {
     const [offers, setOffers] = useState([]);
     useEffect(() => {
-        fetch("https://trip-tuck-server.vercel.app/offers")
+        fetch("http://localhost:5000/offers")
             .then(res => res.json())
             .then(data => setOffers(data))
     }, [])

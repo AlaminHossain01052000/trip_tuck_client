@@ -4,7 +4,7 @@ import "./ManageAllBookings.css"
 const ManageAllBookings = () => {
     const [allBookedOffers, setAllBookedOffers] = useState([]);
     useEffect(() => {
-        fetch("https://trip-tuck-server.vercel.app/bookings")
+        fetch("http://localhost:5000/bookings")
             .then(res => res.json())
             .then(data => setAllBookedOffers(data))
     }, [])
